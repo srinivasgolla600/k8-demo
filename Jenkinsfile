@@ -2,16 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "srinivasgolla/k8-demo:latest"
+        DOCKER_IMAGE = "srinivasgolla600/k8-demo:latest"
     }
 
     stages {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main',
-                    credentialsId: 'github-creds',
-		    url: 'https://github.com/srinivasgolla600/k8-demo.git'
+                checkout scm
             }
         }
 
@@ -47,3 +45,4 @@ pipeline {
         }
     }
 }
+
