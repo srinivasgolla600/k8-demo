@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-creds',
-		    url: 'https://github.com/srinivasgolla/k8-demo.git'
+		    url: 'https://github.com/srinivasgolla600/k8-demo.git'
             }
         }
 
