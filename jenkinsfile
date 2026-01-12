@@ -10,7 +10,8 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/srinivasgolla/k8-demo.git'
+                    credentialsId: 'github-creds',
+		    url: 'https://github.com/srinivasgolla/k8-demo.git'
             }
         }
 
